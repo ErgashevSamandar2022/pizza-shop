@@ -1,0 +1,111 @@
+.section_contact {
+    width: 100%;
+    padding: 4rem 0;
+}
+.contact {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+#form {
+    width: 50%;
+    display: block;
+}
+.xarita {
+    width: 45%;
+}
+.form_control {
+    width: 100%;
+    margin-bottom: 1rem;
+    position: relative;
+}
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: white;
+    font-size: 1.2rem;
+}
+input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid white;
+    outline: 1px solid white;
+    border-radius: 5px;
+    padding-left: 1rem;
+    font-size: 1.1rem;
+}
+.form_span {
+    font-size: 1rem;
+    margin-top: 3px;
+    color: red;
+}
+.form_icon {
+    position: absolute;
+    top: 42px;
+    right: 10px;
+}
+.fa-circle-check {
+    color: green;
+}
+.fa-circle-xmark {
+    color: red;
+}
+#submit {
+    padding: 0;
+    width: 120px !important;
+    background-color: green;
+    border: 0;
+    outline: 0;
+    color: white;
+    margin-top: 1rem !important;
+}
+iframe {
+    height: 500px;
+}
+@media screen and (max-width: 768px) {
+    .contact {
+        flex-direction: column-reverse;
+    }
+    #form,
+    .xarita {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 576px) {
+    iframe {
+        height: 350px;
+    }
+    label {
+        font-size: 1.1rem;
+    }
+    input {
+        font-size: 1rem;
+    }
+    .form_span {
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 390px) {
+    iframe {
+        height: 250px;
+    }
+    label {
+        font-size: 1rem;
+    }
+    input {
+        font-size: 0.9rem;
+    }
+    .form_span {
+        font-size: 0.8rem;
+    }
+}
+.error {
+    border: 1px solid red;
+    outline: 1px solid red;
+}
+.success {
+    border: 1px solid green;
+    outline: 1px solid green;
+}

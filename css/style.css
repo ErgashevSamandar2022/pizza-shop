@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bs-blue: #0d6efd;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #ffffff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-info: #0dcaf0;
+    --cd-red: #ff0000;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+        'Liberation Mono', 'Courier New', monospace;
+}
+body {
+    font-family: var(--bs-font-monospace);
+    background-image: url(../image/dark-pat.jpg);
+}
+
+/* scroll icon start */
+.section_scroll {
+    width: 100%;
+    position: relative;
+}
+.scroll {
+    display: none;
+    width: 70px;
+    position: fixed;
+    z-index: 40;
+    top: 85vh;
+    right: 1rem;
+}
+.scroll img {
+    width: 100%;
+}
+/* scroll icon end */
+
+.section_navbar {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    background-color: var(--cd-red);
+    z-index: 50;
+}
+.container {
+    max-width: 1440px;
+    width: 90%;
+    margin: 0 auto;
+}
+.navbar,
+.respons {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 80px;
+    align-items: center;
+}
+.logo {
+    width: 110px;
+}
+.navbar .navbar_list_items {
+    display: flex;
+}
+.navbar .list_item {
+    position: relative;
+    display: flex;
+    list-style: none;
+    margin: 0 0.6rem;
+}
+.navbar .list_item a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--bs-white);
+    padding: 0 0.5rem;
+    font-weight: 700;
+}
+.navbar .list_item a:hover {
+    color: var(--bs-white);
+}
+.navbar_icon {
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.bars {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+    height: 40px;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    color: var(--bs-white);
+    font-weight: 900;
+    cursor: pointer;
+    background-color: #212529;
+    padding: 0 0.5rem;
+    border-radius: 5px;
+}
+
+/* dropdown */
+.navbar .dropdown {
+    width: 180px;
+    position: absolute;
+    top: 5rem;
+    left: -4rem;
+    background-color: orange;
+}
+.navbar .dropdown_items {
+    width: 100%;
+}
+.navbar .drop_item {
+    list-style: none;
+    line-height: 30px;
+}
+.navbar .drop_item a {
+    padding: 0.5rem 0.5rem;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+.navbar .drop_item a:hover {
+    background-color: var(--bs-dark);
+    color: var(--bs-white) !important;
+}
+.navbar_icon i {
+    font-size: 1.2rem;
+    color: var(--bs-white);
+}
+.navbar .drop_list_item .menu_a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+/* respons */
+.respons .navbar_list_items {
+    background-color: red;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 0;
+}
+.respons .list_item {
+    list-style: none;
+    line-height: 30px;
+    padding: 0 1rem;
+}
+.respons .list_item a {
+    display: block;
+    padding: 0.2rem 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--bs-white);
+}
+.respons .list_item a:hover {
+    background-color: var(--bs-white);
+    color: var(--bs-dark);
+    border-radius: 5px;
+}
+/* respons dropdown */
+.respons .drop_list_item .menu_a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.respons .drop_list_item .menu_a:active {
+    border-radius: 5px 5px 0 0;
+}
+.respons .dropdown {
+    width: 100%;
+    background-color: white;
+}
+.respons .dropdown_items {
+    width: 100%;
+}
+.respons .drop_item {
+    list-style: none;
+    line-height: 30px;
+}
+.respons .drop_item a {
+    padding: 0.5rem 0.5rem;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    color: var(--bs-dark);
+}
+.respons .drop_item a:hover {
+    background-color: var(--bs-dark);
+    color: var(--bs-white) !important;
+}
+.navbar_icon i {
+    font-size: 1.2rem;
+    color: var(--bs-white);
+}
+
+@media screen and (max-width: 992px) {
+    .navbar .navbar_list_items {
+        display: none !important;
+    }
+    .bars {
+        display: flex;
+    }
+}
+
+.none {
+    display: none;
+}
+.block {
+    display: block;
+}

@@ -1,0 +1,175 @@
+.section_mein {
+    width: 100%;
+    padding-top: 5rem;
+}
+.comtainer_mein {
+    max-width: 1440px;
+    width: 90%;
+    margin: 0 auto;
+}
+.mein {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding-top: 7rem; */
+    gap: 1.5rem;
+}
+.mein_image {
+    width: 50%;
+}
+.mein_image img {
+    width: 100%;
+}
+.mein_text {
+    width: 50%;
+    font-family: monospace;
+    font-weight: bold;
+}
+.mein_text h1 {
+    font-size: 50px;
+}
+.mein_text h1 span:nth-child(1) {
+    color: red;
+}
+.mein_text h1 span:nth-child(2) {
+    color: orange;
+}
+.mein_text h1 span:nth-child(3) {
+    color: darkgreen;
+}
+.mein_text p {
+    padding-top: 1rem;
+    font-size: 1.2rem;
+    color: #797979;
+    font-weight: 400;
+}
+.mein_text .btn {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px 12px;
+    margin-top: 1.5rem;
+    border: none;
+    background-color: orange;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    z-index: 8;
+}
+.mein_text .btn::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 55px;
+    top: 0;
+    left: 0;
+    background-color: red;
+    position: absolute;
+    z-index: -1;
+    transition: all 1s ease;
+}
+.mein_text .btn:hover::before {
+    width: 100%;
+}
+
+.mein_cards {
+    width: 100%;
+    display: block;
+    padding: 4rem 0;
+}
+.mein_block {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.mein_block_card {
+    width: 250px;
+    height: 90px;
+    font-size: 1rem;
+    border-radius: 5px 25px;
+    background-color: white;
+    box-shadow: 1px 1px 15px 1px orange;
+}
+.mein_block_card i {
+    color: orange;
+    display: block;
+    padding-top: 10px;
+}
+.mein_block_card .span {
+    color: black;
+    padding-top: 5px;
+    font-weight: bold;
+}
+.mein_block_card p {
+    padding-top: 5px;
+    color: #797979;
+}
+
+@media screen and (max-width: 1100px) {
+    .mein_text h1 {
+        font-size: 40px;
+    }
+    .mein_text p {
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 992px) {
+    .mein {
+        flex-direction: column;
+        padding-top: 7rem;
+    }
+    .mein_image,
+    .mein_text {
+        width: 100%;
+    }
+    .mein_text h1 {
+        font-size: 45px;
+    }
+    .mein_text p {
+        font-size: 1.1rem;
+    }
+    .mein_block_card {
+        width: 200px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .mein_text h1 {
+        font-size: 40px;
+    }
+    .mein_text p {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 576px) {
+    .mein_text h1 {
+        font-size: 33px;
+    }
+    .mein_text p {
+        font-size: 0.8rem;
+    }
+    .mein_text .btn {
+        padding: 1rem 1.2rem;
+        font-size: 1.1rem;
+    }
+    .mein_block_card {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 390px) {
+    .mein_text h1 {
+        font-size: 27px;
+    }
+    .mein_text p {
+        font-size: 0.6rem;
+    }
+    .mein_text .btn {
+        padding: 0.9rem 1rem;
+        font-size: 1rem;
+    }
+}
